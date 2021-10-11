@@ -15,6 +15,8 @@ if __name__ == '__main__':
             if choice == 1:
                 address_book.add_contact()
             elif choice == 2:
+                address_book.edit_contact()
+            elif choice == 3:
                 address_book.display_contacts()
             elif choice == 3:
                 exit(0)
@@ -22,3 +24,6 @@ if __name__ == '__main__':
                 log.warning("Invalid option")
         except ValueError:
             logging.warning("Invalid Option selected")
+            print("Enter valid choice..")
+        except Exception:
+            logging.warning("Enter valid choice..")
